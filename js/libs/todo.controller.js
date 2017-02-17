@@ -20,6 +20,11 @@ function TodoController() {
     title: 'Third todo item',
     completed: false
   }];
+  this.getRemaining = function () {
+    return this.list.filter(function(item){
+      return !item.completed;
+    });
+  };
 }
 
 angular

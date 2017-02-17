@@ -37,6 +37,14 @@
           </a>
         </li>
       </ul>
+      <p class="todo__remaining">
+        <span ng-show="todo.getRemaining().length > 0">
+          You have {{ todo.getRemaining().length }} of {{ todo.list.length }} items todo!
+        </span>
+        <span ng-show="todo.getRemaining().length === 0">
+          All todo items completed!!!
+        </span>
+      </p>
     </div>
     <script src="js/libs/app.js"></script>
     <script src="js/libs/todo.controller.js"></script>
