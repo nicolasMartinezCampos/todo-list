@@ -1,4 +1,15 @@
 function TodoController() {
+  this.newTodo = '';
+  this.addTodo = function () {
+    this.list.unshift({
+      title: this.newTodo,
+      completed: false
+    });
+    this.newTodo = '';
+  };
+  this.removeTodo = function (item, index) {
+    this.list.splice(index, 1);
+  }
   this.list = [{
     title: 'First todo item',
     completed: false
